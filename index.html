@@ -9,12 +9,12 @@
     <h1>Famous Quotes</h1>
       
     <div>
-        <input type="text" placeholder="filterQuotes" ng-model="newQuote" name="addQuote">
+        <input type="text" placeholder="filterQuotes" ng-model="QuoteFilter.text" name="addQuote">
         
         <input placeholder="Quote Text" ng-model="quote.text">
         <input placeholder="Quote Author" ng-model="quote.author">
         <button ng-click="addquotes(quote)">submit</button>
-        <div ng-repeat="quote in quotes | filter:QuoteFilter" ng-click="click(quote)">
+        <div ng-repeat="quote in quotes | filter : QuoteFilter" ng-click="click(quote)">
             <span class="quote-text">"{{quote.text}}"</span>
             <span class="quote-author">~{{quote.author}}</span>
 
